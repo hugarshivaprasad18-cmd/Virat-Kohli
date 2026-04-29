@@ -1,0 +1,69 @@
+/* ============================================================
+   IPL PAGE STYLES
+   ============================================================ */
+
+/* RCB red/gold hero override */
+.ipl-hero {
+  background: radial-gradient(ellipse at 50% 60%, #1a0000 0%, #0a0a0a 70%);
+}
+.ipl-hero::before {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(220,20,60,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255,215,0,0.06) 0%, transparent 50%);
+}
+
+/* IPL Summary Cards */
+.ipl-summary-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.ipl-summary-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  text-align: center;
+  border-top: 3px solid var(--crimson);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ipl-summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.ipl-sc-icon  { font-size: 1.6rem; margin-bottom: 8px; }
+.ipl-sc-value {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.ipl-sc-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Orange Cap badge */
+.orange-cap-badge {
+  display: inline-block;
+  background: rgba(255,140,0,0.2);
+  color: #ff8c00;
+  border: 1px solid rgba(255,140,0,0.4);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Season row highlight */
+.season-2016 td { background: rgba(255,215,0,0.04); }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .ipl-summary-row { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Kohli — Fan Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Playfair+Display:ital,wght@1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/design.css">
+</head>
+
+<body>
+
+  <!-- ── PRELOADER ── -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-crown">👑</div>
+      <div class="preloader-text">KING KOHLI</div>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-crown">👑</span>
+        <span class="logo-text">KING KOHLI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+        <li><a href="#matches" class="nav-link">Matches</a></li>
+        <li><a href="#ipl" class="nav-link ipl-nav">🏏 IPL</a></li>
+        <li><a href="#search" class="nav-link">Search</a></li>
+        <li><a href="#comments" class="nav-link">Comments</a></li>
+        <li><a href="admin.html" class="nav-link nav-admin">⚙ Admin</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <!-- Animated background particles -->
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating cricket elements -->
+    <div class="float-el float-1">🏏</div>
+    <div class="float-el float-2">👑</div>
+    <div class="float-el float-3">🏆</div>
+    <div class="float-el float-4">⭐</div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-down">
+        <span class="badge-dot"></span> THE KING OF CRICKET
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-main animate-slide-up" style="animation-delay:.1s">VIRAT</span>
+        <span class="hero-title-accent animate-slide-up" style="animation-delay:.25s">KOHLI</span>
+      </h1>
+
+      <p class="hero-subtitle animate-fade-up" style="animation-delay:.4s">
+        <em>The Greatest of All Time</em>
+      </p>
+
+      <!-- Kohli image strip -->
+      <div class="hero-image-strip animate-fade-up" style="animation-delay:.5s">
+        <div class="hero-img-card">
+          <img src="images/kohli-t20.jpg" alt="Virat Kohli T20 WC" style="object-position:center 20%;" loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')">
+          <span class="img-caption">T20 WC 2024</span>
+        </div>
+        <div class="hero-img-card hero-img-main">
+          <img src="images/kohli-main.jpg" alt="Virat Kohli" style="object-position:center 15%;" loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')">
+          <span class="img-caption">The King 👑</span>
+        </div>
+        <div class="hero-img-card">
+          <img src="images/kohli-2012.jpg" alt="Virat Kohli" style="object-position:center 25%;" loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')">
+          <span class="img-caption">God's Plan</span>
+        </div>
+      </div>
+
+      <div class="hero-stats-row animate-fade-up" style="animation-delay:.6s">
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="27324">0</span>
+          <span class="hero-stat-label">International Runs</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="81">0</span>
+          <span class="hero-stat-label">Centuries</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="543">0</span>
+          <span class="hero-stat-label">Int'l Matches</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="8004">0</span>
+          <span class="hero-stat-label">IPL Runs</span>
+        </div>
+      </div>
+
+      <div class="hero-cta animate-fade-up" style="animation-delay:.75s">
+        <a href="#dashboard" class="btn btn-primary btn-glow">
+          <span>Explore Stats</span> <span class="btn-arrow">→</span>
+        </a>
+        <a href="#matches" class="btn btn-outline">Match History</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── ACHIEVEMENTS TICKER ── -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>👑 81 International Centuries</span>
+      <span>🏏 Most ODI Centuries — 50</span>
+      <span>⚡ T20 WC 2024 Champion</span>
+      <span>🏆 ICC Player of the Year × 4</span>
+      <span>🧢 IPL Orange Cap 2016 — 973 Runs</span>
+      <span>📈 Fastest to 8000 ODI Runs</span>
+      <span>🌟 Wisden Cricketer of the Decade</span>
+      <span>🔥 82* vs Pakistan — T20 WC 2022</span>
+      <span>💯 50 ODI Centuries — World Record</span>
+      <span>👑 81 International Centuries</span>
+      <span>🏏 Most ODI Centuries — 50</span>
+      <span>⚡ T20 WC 2024 Champion</span>
+      <span>🏆 ICC Player of the Year × 4</span>
+      <span>🧢 IPL Orange Cap 2016 — 973 Runs</span>
+      <span>📈 Fastest to 8000 ODI Runs</span>
+      <span>🌟 Wisden Cricketer of the Decade</span>
+      <span>🔥 82* vs Pakistan — T20 WC 2022</span>
+      <span>💯 50 ODI Centuries — World Record</span>
+    </div>
+  </div>
+
+  <!-- ── DASHBOARD ── -->
+  <section class="section" id="dashboard">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">STATISTICS</div>
+        <h2 class="section-title">Career <span class="accent">Dashboard</span></h2>
+        <p class="section-subtitle">Comprehensive statistics across all formats</p>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-format="ALL">ALL</button>
+        <button class="filter-btn" data-format="ODI">ODI</button>
+        <button class="filter-btn" data-format="Test">TEST</button>
+        <button class="filter-btn" data-format="T20">T20I</button>
+      </div>
+
+      <div class="stats-grid" id="statsGrid">
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Loading stats…</p>
+        </div>
+      </div>
+
+      <!-- IPL Row inside Dashboard -->
+      <div class="ipl-dashboard-row reveal" id="iplDashRow">
+        <div class="ipl-dash-header">
+          <span class="ipl-dash-title">🏏 IPL — Royal Challengers Bangalore</span>
+          <a href="#ipl" class="ipl-dash-link">View full IPL stats ↓</a>
+        </div>
+        <div class="ipl-dash-cards" id="iplDashCards">
+          <div class="loading-spinner" style="padding:24px;">
+            <div class="spinner"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aggregate-bar reveal" id="aggregateBar" style="display:none;">
+        <div class="aggregate-item">
+          <span class="aggregate-label">Total Matches</span>
+          <span class="aggregate-value" id="aggMatches">—</span>
+        </div>
+        <div class="aggregate-item">
+          <span class="aggregate-label">Total Runs</span>
+          <span class="aggregate-value" id="aggRuns">—</span>
+        </div>
+        <div class="aggregate-item">
+          <span class="aggregate-label">Centuries</span>
+          <span class="aggregate-value" id="aggCenturies">—</span>
+        </div>
+        <div class="aggregate-item">
+          <span class="aggregate-label">Half-Centuries</span>
+          <span class="aggregate-value" id="aggHalfCenturies">—</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ICONIC MOMENTS ── -->
+  <section class="section section-dark" id="moments">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">GALLERY</div>
+        <h2 class="section-title">Iconic <span class="accent">Moments</span></h2>
+        <p class="section-subtitle">Snapshots from a legendary career</p>
+      </div>
+      <div class="moments-grid reveal">
+        <div class="moment-card moment-large">
+          <img src="images/kohli-main.jpg" alt="Virat Kohli" style="object-position:center 15%;" loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')">
+          <div class="moment-overlay">
+            <div class="moment-tag">THE KING 👑</div>
+            <div class="moment-title">Virat Kohli</div>
+            <div class="moment-sub">T20 World Cup 2024 Champion</div>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="images/kohli-t20.jpg" alt="Kohli T20 WC Trophy" style="object-position:center 20%;" loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')">
+          <div class="moment-overlay">
+            <div class="moment-tag">T20 WC 2024</div>
+            <div class="moment-title">World Champion</div>
+            <div class="moment-sub">Lifting the Trophy with the Tricolour</div>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="images/kohli-2012.jpg" alt="God's Plan" style="object-position:center 25%;" loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')">
+          <div class="moment-overlay">
+            <div class="moment-tag">GOD'S PLAN</div>
+            <div class="moment-title">Pure Emotion</div>
+            <div class="moment-sub">Kissing the Ring — A Moment of Faith</div>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="images/kohli-ipl.jpg" alt="Forever 18 — RCB IPL" style="object-position:center 20%;" loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')">
+          <div class="moment-overlay">
+            <div class="moment-tag">FOREVER 18 · RCB</div>
+            <div class="moment-title">IPL Champion 2025</div>
+            <div class="moment-sub">The Dream Finally Fulfilled</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── VIDEO HIGHLIGHTS ── -->
+      <div class="section-header reveal" style="margin-top:64px;">
+        <div class="section-eyebrow">HIGHLIGHTS</div>
+        <h2 class="section-title">Watch <span class="accent">Highlights</span></h2>
+        <p class="section-subtitle">Relive the greatest innings in cricket history</p>
+      </div>
+
+      <div class="videos-grid reveal">
+
+        <div class="video-card">
+          <div class="video-thumb-wrap">
+            <iframe src="https://www.youtube.com/embed/R7rmkMJMFpM" title="Virat Kohli 82* vs Pakistan T20 WC 2022"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-tag">T20 WC 2022</div>
+            <div class="video-title">82* vs Pakistan — MCG</div>
+            <div class="video-sub">The greatest T20 chase in history</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb-wrap">
+            <iframe src="https://www.youtube.com/embed/Vc7eLMFmPpQ" title="Virat Kohli 183 vs Pakistan ODI 2012"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-tag">ODI 2012</div>
+            <div class="video-title">183 vs Pakistan — Asia Cup</div>
+            <div class="video-sub">The innings that announced the King</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb-wrap">
+            <iframe src="https://www.youtube.com/embed/2bPNGJFBFkA" title="Virat Kohli IPL 2016 Orange Cap Season"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-tag">IPL 2016</div>
+            <div class="video-title">Orange Cap — 973 Runs</div>
+            <div class="video-sub">The greatest IPL season ever played</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MATCH HISTORY ── -->
+  <section class="section section-alt" id="matches">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">RECORDS</div>
+        <h2 class="section-title">Match <span class="accent">History</span></h2>
+        <p class="section-subtitle">Relive every iconic innings</p>
+      </div>
+
+      <div class="match-controls reveal">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="matchSearch" class="search-input" placeholder="Search by opponent…" autocomplete="off">
+          <button class="search-clear" id="searchClear" style="display:none;">✕</button>
+        </div>
+        <div class="match-format-filter">
+          <button class="filter-btn-sm active" data-match-format="ALL">All</button>
+          <button class="filter-btn-sm" data-match-format="ODI">ODI</button>
+          <button class="filter-btn-sm" data-match-format="Test">Test</button>
+          <button class="filter-btn-sm" data-match-format="T20">T20I</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper reveal">
+        <table class="match-table">
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th>Opponent</th>
+              <th>Date</th>
+              <th>Venue</th>
+              <th>Runs</th>
+              <th>Balls</th>
+              <th>4s</th>
+              <th>6s</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody id="matchTableBody">
+            <tr>
+              <td colspan="9" class="table-loading">
+                <div class="spinner"></div> Loading…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="match-count" id="matchCount"></div>
+    </div>
+  </section>
+
+  <!-- ── IPL SECTION ── -->
+  <section class="section" id="ipl">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">INDIAN PREMIER LEAGUE</div>
+        <h2 class="section-title">🏏 IPL <span class="accent">Career</span></h2>
+        <p class="section-subtitle">Royal Challengers Bangalore · 17 Seasons · 2008–2024</p>
+      </div>
+
+      <div class="ipl-summary-row reveal" id="iplSummaryCards">
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Loading IPL stats…</p>
+        </div>
+      </div>
+
+      <div class="section-header reveal" style="margin-top:48px;margin-bottom:24px;">
+        <h3 class="section-title" style="font-size:1.5rem;">Season <span class="accent">by Season</span></h3>
+      </div>
+      <div class="table-wrapper reveal">
+        <table class="match-table" id="iplSeasonTable">
+          <thead>
+            <tr>
+              <th>Season</th>
+              <th>Team</th>
+              <th>M</th>
+              <th>Runs</th>
+              <th>100s</th>
+              <th>50s</th>
+              <th>HS</th>
+              <th>Avg</th>
+              <th>SR</th>
+              <th>Award</th>
+            </tr>
+          </thead>
+          <tbody id="iplSeasonBody">
+            <tr>
+              <td colspan="10" class="table-loading">
+                <div class="spinner"></div> Loading…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-header reveal" style="margin-top:48px;margin-bottom:24px;">
+        <h3 class="section-title" style="font-size:1.5rem;">Iconic <span class="accent">Innings</span></h3>
+      </div>
+      <div class="match-controls reveal">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="iplPerfSearch" class="search-input" placeholder="Search by opponent…"
+            autocomplete="off">
+          <button class="search-clear" id="iplPerfClear" style="display:none;">✕</button>
+        </div>
+        <div class="match-format-filter" id="iplSeasonFilterBtns">
+          <button class="filter-btn-sm active" data-ipl-season="ALL">All Seasons</button>
+        </div>
+      </div>
+      <div class="table-wrapper reveal">
+        <table class="match-table">
+          <thead>
+            <tr>
+              <th>Season</th>
+              <th>Opponent</th>
+              <th>Date</th>
+              <th>Venue</th>
+              <th>Runs</th>
+              <th>Balls</th>
+              <th>4s</th>
+              <th>6s</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody id="iplPerfTableBody">
+            <tr>
+              <td colspan="9" class="table-loading">
+                <div class="spinner"></div> Loading…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="match-count" id="iplPerfCount"></div>
+    </div>
+  </section>
+
+  <!-- ── GLOBAL SEARCH ── -->
+  <section class="section section-alt" id="search">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">FIND</div>
+        <h2 class="section-title">Global <span class="accent">Search</span></h2>
+        <p class="section-subtitle">Search across matches and fan comments</p>
+      </div>
+      <div class="global-search-box reveal">
+        <input type="text" id="globalSearchInput" class="global-search-input"
+          placeholder="Search everything… (e.g. Australia, century, legendary)" autocomplete="off">
+        <button class="btn btn-primary" id="globalSearchBtn">Search</button>
+      </div>
+      <div id="globalSearchResults" class="global-search-results" style="display:none;"></div>
+    </div>
+  </section>
+
+  <!-- ── COMMENTS ── -->
+  <section class="section" id="comments">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">COMMUNITY</div>
+        <h2 class="section-title">Fan <span class="accent">Comments</span></h2>
+        <p class="section-subtitle">Share your love for King Kohli</p>
+      </div>
+
+      <div class="comment-form-card reveal">
+        <h3 class="form-title">Leave a Comment</h3>
+        <form id="commentForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="commentUsername">Your Name</label>
+            <input type="text" id="commentUsername" class="form-input" placeholder="Enter your name" required
+              maxlength="50">
+            <span class="form-error" id="usernameError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="commentMessage">Your Message</label>
+            <textarea id="commentMessage" class="form-textarea" rows="4"
+              placeholder="Share your thoughts about King Kohli…" required maxlength="500"></textarea>
+            <div class="char-count"><span id="charCount">0</span>/500</div>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit btn-glow" id="submitBtn">
+            <span class="btn-text">Post Comment</span>
+            <span class="btn-loading" style="display:none;">Posting…</span>
+          </button>
+        </form>
+        <div id="formSuccess" class="form-success" style="display:none;">✅ Comment posted!</div>
+      </div>
+
+      <div class="comments-list" id="commentsList">
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Loading comments…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><span>👑</span><span class="logo-text">KING KOHLI</span></div>
+            <p class="footer-tagline">Celebrating the Greatest of All Time.<br>Built with ❤️ for cricket fans worldwide.
+            </p>
+          </div>
+          <div class="footer-links-col">
+            <div class="footer-col-title">Navigate</div>
+            <a href="#hero">Home</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#matches">Matches</a>
+            <a href="#ipl">IPL Career</a>
+            <a href="#comments">Comments</a>
+          </div>
+          <div class="footer-links-col">
+            <div class="footer-col-title">More</div>
+            <a href="ipl.html">IPL Page</a>
+            <a href="admin.html">Admin Panel</a>
+          </div>
+          <div class="footer-stats-col">
+            <div class="footer-col-title">Quick Stats</div>
+            <div class="footer-stat-row"><span>Int'l Runs</span><strong>27,324</strong></div>
+            <div class="footer-stat-row"><span>Centuries</span><strong>81</strong></div>
+            <div class="footer-stat-row"><span>IPL Runs</span><strong>8,004</strong></div>
+            <div class="footer-stat-row"><span>Orange Caps</span><strong>1</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>King Kohli Fan Experience &copy; 2026 &mdash; All statistics are publicly available data.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

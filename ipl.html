@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Kohli — IPL Career</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ipl.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span>👑</span><span class="logo-text">KING KOHLI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"   class="nav-link">Home</a></li>
+        <li><a href="#ipl-hero"    class="nav-link active">IPL</a></li>
+        <li><a href="#ipl-stats"   class="nav-link">Season Stats</a></li>
+        <li><a href="#ipl-matches" class="nav-link">Performances</a></li>
+        <li><a href="admin.html"   class="nav-link nav-admin">⚙ Admin</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- IPL HERO -->
+  <section class="hero ipl-hero" id="ipl-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">INDIAN PREMIER LEAGUE</div>
+      <h1 class="hero-title">
+        <span class="hero-title-main">RCB'S</span>
+        <span class="hero-title-accent">KING</span>
+      </h1>
+      <p class="hero-subtitle">17 Seasons · One Legend · Royal Challengers Bangalore</p>
+      <div class="hero-stats-row">
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="8004">0</span>
+          <span class="hero-stat-label">IPL Runs</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="8">0</span>
+          <span class="hero-stat-label">Centuries</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="252">0</span>
+          <span class="hero-stat-label">Matches</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="1">0</span>
+          <span class="hero-stat-label">Orange Cap</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#ipl-stats"   class="btn btn-primary">Season Stats</a>
+        <a href="#ipl-matches" class="btn btn-outline">Performances</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator"><div class="scroll-arrow"></div></div>
+  </section>
+
+  <!-- SEASON STATS -->
+  <section class="section" id="ipl-stats">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Season <span class="accent">Stats</span></h2>
+        <p class="section-subtitle">Kohli's IPL record season by season — 2008 to 2024</p>
+      </div>
+
+      <!-- Summary Cards -->
+      <div class="ipl-summary-row" id="iplSummaryRow">
+        <div class="loading-spinner"><div class="spinner"></div><p>Loading…</p></div>
+      </div>
+
+      <!-- Season Filter -->
+      <div class="filter-bar" id="seasonFilterBar" style="flex-wrap:wrap;"></div>
+
+      <!-- Stats Table -->
+      <div class="table-wrapper" style="margin-top:24px;">
+        <table class="match-table" id="iplStatsTable">
+          <thead>
+            <tr>
+              <th>Season</th><th>Team</th><th>Matches</th><th>Runs</th>
+              <th>100s</th><th>50s</th><th>HS</th><th>Avg</th><th>SR</th><th>🏆</th>
+            </tr>
+          </thead>
+          <tbody id="iplStatsBody">
+            <tr><td colspan="10" class="table-loading"><div class="spinner"></div> Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFORMANCES -->
+  <section class="section section-alt" id="ipl-matches">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Match <span class="accent">Performances</span></h2>
+        <p class="section-subtitle">Iconic innings from IPL history</p>
+      </div>
+
+      <div class="match-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="iplSearch" class="search-input"
+            placeholder="Search by opponent…" autocomplete="off">
+          <button class="search-clear" id="iplSearchClear" style="display:none;">✕</button>
+        </div>
+        <div class="match-format-filter" id="iplSeasonBtns">
+          <button class="filter-btn-sm active" data-ipl-season="ALL">All Seasons</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="match-table">
+          <thead>
+            <tr>
+              <th>Season</th><th>Opponent</th><th>Date</th><th>Venue</th>
+              <th>Runs</th><th>Balls</th><th>4s</th><th>6s</th><th>Result</th>
+            </tr>
+          </thead>
+          <tbody id="iplPerfBody">
+            <tr><td colspan="9" class="table-loading"><div class="spinner"></div> Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="match-count" id="iplPerfCount"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo"><span>👑</span><span class="logo-text">KING KOHLI</span></div>
+        <p class="footer-tagline">Celebrating the Greatest of All Time</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#ipl-stats">IPL Stats</a>
+          <a href="#ipl-matches">Performances</a>
+          <a href="admin.html">Admin</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>King Kohli Fan Experience &copy; 2026 — Built with ❤️ for cricket fans worldwide</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ipl.js"></script>
+</body>
+</html>
